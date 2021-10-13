@@ -1,0 +1,169 @@
+<form [formGroup]="profileForm">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h4>Basic Information</h4>
+      </div>
+      <div class="col-3"></div>
+      <div class="col-5">
+        <div class="example-button-row">
+          <button mat-stroked-button color="accent">Select Auto</button>
+        </div>
+      </div>
+      <div class="col-1">
+        <mat-checkbox class="example-margin" formControlName="checkbox">Demo</mat-checkbox>
+      </div>
+    </div>
+    <br>
+    <mat-divider class="bg-primary"></mat-divider>
+  </div>
+  <br>
+
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <mat-form-field class="example-full-width">
+          <mat-label>Loan Type</mat-label>
+          <mat-select formControlName="loantype">
+            <mat-option *ngFor="let loantype of loantypes" [value]="loantype.value">
+              {{loantype.viewValue}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div class="col">
+        <mat-form-field class="example-full-width">
+          <mat-label>Model Year</mat-label>
+          <input matInput value="2021" formControlName="modelyear">
+        </mat-form-field>
+      </div>
+      <div class="col">
+        <mat-form-field class="example-full-width">
+          <input matInput value="Make" formControlName="make">
+        </mat-form-field>
+      </div>
+      <div class="col">
+        <mat-form-field class="example-full-width">
+          <input matInput value="Model" formControlName="model">
+        </mat-form-field>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <mat-form-field class="example-full-width">
+          <input matInput value="Body Type" formControlName="bodytype">
+        </mat-form-field>
+      </div>
+      <div class="col">
+        <mat-form-field class="example-full-width">
+          <input matInput value="Transmission" formControlName="transmission">
+        </mat-form-field>
+      </div>
+      <div class="col">
+        <mat-form-field class="example-full-width">
+          <mat-label>Vehicle Type</mat-label>
+          <mat-select formControlName="vehicletype">
+            <mat-option *ngFor="let vehicletype of vehicletypes" [value]="vehicletype.value">
+              {{vehicletype.viewValue}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div class="col">
+        <mat-form-field class="example-full-width">
+          <mat-label>Vehicle Condition</mat-label>
+          <mat-select formControlName="vehiclecondition">
+            <mat-option *ngFor="let vehiclecondition of vehicleconditions" [value]="vehiclecondition.value">
+              {{vehiclecondition.viewValue}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <mat-form-field class="example-full-width">
+          <input matInput value="Registration Number" formControlName="registrationnumber">
+        </mat-form-field>
+      </div>
+      <div class="col">
+        <mat-form-field class="example-full-width">
+          <input matInput value="Vin Number" formControlName="vinnumber">
+        </mat-form-field>
+      </div>
+      <div class="col-6">
+        <div class="example-button-row">
+          <button mat-stroked-button color="accent">PPSR</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+
+      <div class="col">
+        <mat-form-field class="example-full-width">
+          <mat-label>Source Vehicle</mat-label>
+          <mat-select formControlName="sourcevehicle">
+            <mat-option *ngFor="let sourceVehicle of sourceVehicles" [value]="sourceVehicle.value">
+              {{sourceVehicle.viewValue}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div class="col">
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Fuel Efficient Indicator</mat-label>
+          <mat-select formControlName="fuelefficientindicator">
+            <mat-option *ngFor="let fuelIndicator of fuelIndicators" [value]="fuelIndicator.value">
+              {{fuelIndicator.viewValue}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div class="col-6">
+        <div class="example-button-row">
+          <button mat-stroked-button color="accent" borderColor="error.main">Glasses Guide</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <mat-form-field class="example-full-width">
+          <mat-label>Sale Type</mat-label>
+          <mat-select formControlName="saletype">
+            <mat-option *ngFor="let saleType of saleTypes" [value]="saleType.value">
+              {{saleType.viewValue}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div class="col">
+        <mat-form-field class="example-full-width">
+          <mat-label>Registration State</mat-label>
+          <mat-select>
+            <mat-option *ngFor="let registrationstate of registrationState" [value]="registrationstate.value">
+              {{registrationstate.viewValue}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div class="col-6">
+      </div>
+    </div>
+  </div>
+</form>
