@@ -1,0 +1,42 @@
+<form [formGroup]="profileForm">
+<div class="add-lessons-form" >
+  <ng-container formArrayName="users">
+    <ng-container *ngFor="let lessonForm of users.controls;">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <mat-form-field appearance="fill">
+              <mat-label>First name</mat-label>
+              <input matInput>
+            </mat-form-field>
+          </div>
+          <div class="col">
+            <mat-form-field appearance="fill">
+              <mat-label>Last name</mat-label>
+              <input matInput>
+            </mat-form-field>
+          </div>
+          <div class="col">
+            <mat-form-field appearance="fill">
+              <mat-label>Age</mat-label>
+              <input matInput>
+            </mat-form-field>
+          </div>
+          <div class="col">
+            <mat-form-field appearance="fill">
+              <mat-label>Address</mat-label>
+              <input matInput>
+            </mat-form-field>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+  </ng-container>
+  <div class="container">
+  <div mat-dialog-actions class="example-button-row" class="vertical-center">
+    <button mat-raised-button color="primary" (click)="addUser()">Add User</button>
+    <button  mat-raised-button color="warn" (click)="deleteUser()">Delete User</button>
+  </div>
+  </div>
+</div>
+</form>
