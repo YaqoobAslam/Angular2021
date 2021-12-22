@@ -1,0 +1,77 @@
+<form [formGroup]="profileForm">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h4>Other Information</h4>
+      </div>
+      <div class="col-9"></div>
+    </div>
+    <mat-divider class="bg-primary"></mat-divider>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <mat-form-field class="example-full-width">
+          <mat-label>Date Of Birth</mat-label>
+          <input matInput placeholder="14/07/2021" value="">
+        </mat-form-field>
+      </div>
+      <div class="col">
+        <mat-form-field class="example-full-width">
+          <mat-label>Marital Status</mat-label>
+          <mat-select>
+            <mat-option *ngFor="let maritalStatus of maritalstatus" [value]="maritalStatus.value">
+              {{maritalStatus.viewValue}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div class="col">
+        <mat-form-field class="example-full-width">
+          <mat-label>No Of Dependent</mat-label>
+          <input matInput type="number" class="example-right-align"  formControlName="noofdependent" (change)="openDialog()">
+        </mat-form-field>
+      </div>
+      <div class="col">
+        <div class="example-button-row" >
+        <button mat-raised-button disabled>Detail</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+          <mat-checkbox>Unlicensed Customer</mat-checkbox>
+      </div>
+      <div class="col-9"></div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <mat-form-field class="example-full-width">
+          <mat-label>License State</mat-label>
+          <mat-select >
+            <mat-option *ngFor="let licenceState of licencestate" [value]="licenceState.value">
+              {{licenceState.viewValue}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div class="col">
+        <mat-form-field class="example-full-width">
+          <mat-label>Driving License No</mat-label>
+          <input matInput placeholder="255594" value="45896145" >
+        </mat-form-field>
+      </div>
+      <div class="col">
+        <mat-form-field class="example-full-width">
+          <mat-label>Driving License Expire</mat-label>
+          <input matInput placeholder="1/2/2021"   >
+        </mat-form-field>
+      </div>
+      <div class="col-3"></div>
+    </div>
+  </div>
+</form>

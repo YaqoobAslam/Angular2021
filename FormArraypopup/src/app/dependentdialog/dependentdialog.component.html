@@ -1,0 +1,17 @@
+
+<div class="add-lessons-form" [formGroup]="profileForm">
+  <h2>Dependent Ages:</h2>
+  <ng-container formArrayName="users">
+    <ng-container *ngFor="let lessonForm of users.controls;">
+      <div>
+        <mat-form-field>
+          <input matInput placeholder="Dependent age">
+        </mat-form-field>
+      </div>
+    </ng-container>
+  </ng-container>
+
+    <div mat-dialog-actions>
+      <button mat-button [mat-dialog-close] cdkFocusInitial class="btn btn-danger" >OK</button>
+    </div>
+</div>
