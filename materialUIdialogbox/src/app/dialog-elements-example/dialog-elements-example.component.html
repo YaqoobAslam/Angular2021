@@ -1,0 +1,20 @@
+<div>
+  <h2 mat-dialog-title>
+    Confirm Dialog</h2>
+  <mat-dialog-content class="mat-typography">
+
+    <p>
+      Are you sure you want to do this?
+    </p>
+  </mat-dialog-content>
+
+  <mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>Cancel</button>
+    <button mat-button [mat-dialog-close]="true" cdkFocusInitial (click)="nextRoute()" routerLink="/dialognext">Next</button>
+ <button mat-button [mat-dialog-close]="true" cdkFocusInitial (click)="openPopup()" >Popup</button>
+  </mat-dialog-actions>
+</div>
+
+
+
+
