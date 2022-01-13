@@ -25,6 +25,13 @@ export class ProfileEditorComponent implements OnInit {
   });
   onSubmit(){
     console.warn(this.profileForm.value);
-    
+  }
+  updaterofile(){
+    this.profileForm.patchValue({
+      firstNmae: 'Nancy',
+      address: {
+        street: '123 Drew Street',
+      }
+    })
   }
 }
