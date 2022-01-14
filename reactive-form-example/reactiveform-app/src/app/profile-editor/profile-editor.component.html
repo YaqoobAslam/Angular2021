@@ -20,6 +20,9 @@
         <input id="zip" type="text"  formControlName="zip" /><br><br>
     </div>
     <p>Complete the form to enable button.</p>
+    <p>Form Status: {{profileForm.status}}</p>
+    
     <button type="submit" [disabled]="!profileForm.valid">Submit</button>
     <button (click)="updateProfile()">Update Profile</button>
+    
 </form>
